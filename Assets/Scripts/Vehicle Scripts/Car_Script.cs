@@ -49,10 +49,7 @@ public class Car_Script : MonoBehaviour
     {
         CheckGround();
         Salto();
-    }
-    
-
-
+    }   
 
     //#################################################################//
 

@@ -1,7 +1,14 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - AxeScript
     - Car_Script
+    - FireBallScript
+    - GeneradorDePrueba
+    - MazeScript
+    - ShieldScript
+    - SlashScript
+    - TirachinasScript
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
@@ -47,7 +54,23 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 10752}
+    - Class: 114
+      Script: {instanceID: 13276}
+    - Class: 114
+      Script: {instanceID: 22020}
+    - Class: 114
+      Script: {instanceID: 25256}
+    - Class: 114
+      Script: {instanceID: 25344}
+    - Class: 114
+      Script: {instanceID: 27328}
+    - Class: 114
+      Script: {instanceID: 30046}
+    - Class: 114
+      Script: {instanceID: 33108}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 135
       Script: {instanceID: 0}
     - Class: 146
       Script: {instanceID: 0}
@@ -476,7 +499,50 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 1e1dd73f892cd91a0427593ca8154c41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: FireBallScript
+  - hash:
+      serializedVersion: 2
+      Hash: de4a61864dd11bd2d17c93d382d93ba7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ShieldScript
+  - hash:
+      serializedVersion: 2
+      Hash: 75ad12db278b58a77227beb3d2f093f6
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GeneradorDePrueba
+  - hash:
+      serializedVersion: 2
+      Hash: b76bd5ccd1508bff70619929122e9bca
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SlashScript
+  - hash:
+      serializedVersion: 2
+      Hash: 27cec171c359d983bb712b962b19fb0a
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: AxeScript
+  - hash:
+      serializedVersion: 2
+      Hash: 4c256552c246b070fcd678533a718918
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MazeScript
+  - hash:
+      serializedVersion: 2
+      Hash: 1e1dd73f892cd91a0427593ca8154c41
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: TirachinasScript
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Alejandro/Desktop/Prototipo - Proyecto RoRo.exe
+  playerPath: C:/Users/Alejandro/Desktop/P-RoRo_Ejecutable v0.3/Prototipo - Proyecto
+    RoRo.exe

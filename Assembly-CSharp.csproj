@@ -62,6 +62,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\General\GeneradorDePrueba.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\AxeScript.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\FireBallScript.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\MazeScript.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\ShieldScript.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\SlashScript.cs" />
+    <Compile Include="Assets\Scripts\Habilities Scripts\TirachinasScript.cs" />
     <Compile Include="Assets\Scripts\Vehicle Scripts\Car_Script.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Alejandro/Desktop/Prototipo - Proyecto RoRo v0.1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
