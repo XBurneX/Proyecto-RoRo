@@ -17,7 +17,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = GetComponent<MODELO>().cooldown;
+        timer = 0;
         actualLive = GetComponent<MODELO>().live * liveModifier;
         car.GetComponent<Rigidbody>().mass = (GetComponent<MODELO>().peso * massModifier) + 3000;
         car.GetComponent<Car_Script>().giroForce = (GetComponent<MODELO>().traccion * 5) + 30;
@@ -31,11 +31,11 @@ public class PlayerController : MonoBehaviour
     {
         if (habilityCharged == false)
         {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
+            timer += Time.deltaTime;
+            if (timer >= GetComponent<MODELO>().cooldown)
             {
                 habilityCharged = true;
-                timer = GetComponent<MODELO>().cooldown;
+                //timer = 0;
             }
         }
         
@@ -50,7 +50,7 @@ public class PlayerController : MonoBehaviour
     {     //cuando "Carroceria" detecte la tecla de habilidad,llamará esta función
         if (habilityCharged == true)
         {
-            timer = GetComponent<MODELO>().cooldown;
+            timer = 0;
 
             //llamar funcion generadora de habilidad(script por crear) y indicando el nombre de la habilidad "habilityName"
             Debug.Log("Habilidad lanzada");
