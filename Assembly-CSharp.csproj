@@ -64,8 +64,12 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\General\ButtomSystem.cs" />
     <Compile Include="Assets\Scripts\General\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\General\DañoPrueba.cs" />
     <Compile Include="Assets\Scripts\General\GeneradorDePrueba.cs" />
+    <Compile Include="Assets\Scripts\General\HabGenerador.cs" />
+    <Compile Include="Assets\Scripts\General\Meta.cs" />
     <Compile Include="Assets\Scripts\General\MouseLock.cs" />
+    <Compile Include="Assets\Scripts\General\WinLoseScript.cs" />
     <Compile Include="Assets\Scripts\Habilities Scripts\AxeScript.cs" />
     <Compile Include="Assets\Scripts\Habilities Scripts\FireBallScript.cs" />
     <Compile Include="Assets\Scripts\Habilities Scripts\MazeScript.cs" />

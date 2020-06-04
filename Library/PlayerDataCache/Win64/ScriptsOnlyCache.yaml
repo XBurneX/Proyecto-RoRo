@@ -5,24 +5,30 @@ ScriptsOnlyBuild:
     - ButtomSystem
     - Car_Script
     - ChangeScene
+    - "Da\xF1oPrueba"
     - FireBallScript
     - GeneradorDePrueba
+    - HabGenerador
+    - JabaliModelo
+    - JabaliVista
+    - MODELO
     - MazeScript
+    - Meta
     - MouseLock
+    - PlayerController
+    - PlayerVista
     - ShieldScript
     - SlashScript
     - TirachinasScript
+    - WinLoseScript
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
-    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -34,6 +40,49 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.RawImage
     - UnityEngine.UI.Text
   sceneClasses:
+    Assets/Scenes/Derrota.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9660}
+    - Class: 114
+      Script: {instanceID: 9850}
+    - Class: 114
+      Script: {instanceID: 11018}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
     Assets/Scenes/MenuCreditos.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -66,13 +115,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 11364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -121,21 +170,21 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10444}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 20520}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 21350}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 22386}
+      Script: {instanceID: 11364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -184,19 +233,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 21350}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 22386}
+      Script: {instanceID: 11364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -245,19 +294,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10216}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10556}
+      Script: {instanceID: 10566}
     - Class: 114
-      Script: {instanceID: 10576}
+      Script: {instanceID: 10586}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10610}
     - Class: 114
-      Script: {instanceID: 11342}
+      Script: {instanceID: 10902}
     - Class: 114
-      Script: {instanceID: 21350}
+      Script: {instanceID: 11018}
     - Class: 114
-      Script: {instanceID: 22386}
+      Script: {instanceID: 11364}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -318,24 +367,50 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9790}
     - Class: 114
+      Script: {instanceID: 9810}
+    - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10394}
+      Script: {instanceID: 10018}
     - Class: 114
-      Script: {instanceID: 10418}
+      Script: {instanceID: 10218}
     - Class: 114
-      Script: {instanceID: 10542}
+      Script: {instanceID: 10346}
     - Class: 114
-      Script: {instanceID: 10760}
+      Script: {instanceID: 10398}
     - Class: 114
-      Script: {instanceID: 10878}
+      Script: {instanceID: 10400}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 10424}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 10462}
     - Class: 114
-      Script: {instanceID: 11146}
+      Script: {instanceID: 10552}
+    - Class: 114
+      Script: {instanceID: 10772}
+    - Class: 114
+      Script: {instanceID: 10842}
+    - Class: 114
+      Script: {instanceID: 10876}
+    - Class: 114
+      Script: {instanceID: 10894}
+    - Class: 114
+      Script: {instanceID: 10966}
+    - Class: 114
+      Script: {instanceID: 11018}
+    - Class: 114
+      Script: {instanceID: 11074}
+    - Class: 114
+      Script: {instanceID: 11166}
+    - Class: 114
+      Script: {instanceID: 11342}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 114
+      Script: {instanceID: 11412}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 135
       Script: {instanceID: 0}
@@ -344,6 +419,8 @@ ScriptsOnlyBuild:
     - Class: 146
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -385,8 +462,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9850}
     - Class: 114
-      Script: {instanceID: 10998}
+      Script: {instanceID: 11018}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
+      Script: {instanceID: 0}
+    Assets/Scenes/Victoria.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 9660}
+    - Class: 114
+      Script: {instanceID: 9810}
+    - Class: 114
+      Script: {instanceID: 9850}
+    - Class: 114
+      Script: {instanceID: 10218}
+    - Class: 114
+      Script: {instanceID: 11018}
+    - Class: 114
+      Script: {instanceID: 11364}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -527,6 +655,12 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
+      Hash: 32562c9970876bc06baa96b22be6a2b4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HabGenerador
+  - hash:
+      serializedVersion: 2
       Hash: cf9f5cf2c3145a37ac07f00e50e460f9
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -593,6 +727,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 7bf5b7b568b6429b1a84055a67b0834b
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerVista
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -603,6 +743,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: ScrollRect
+  - hash:
+      serializedVersion: 2
+      Hash: 5151b8f34315cdefca7ffc5d331284bc
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JabaliModelo
   - hash:
       serializedVersion: 2
       Hash: 4c256552c246b070fcd678533a718918
@@ -624,9 +770,21 @@ ScriptsOnlyBuild:
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MouseLock
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TMP_SpriteAnimator
+  - hash:
+      serializedVersion: 2
+      Hash: 5b96ab977b61292da552b0bbbbd4db52
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PlayerController
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -659,6 +817,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 39e718c150a3476f8bedf17ec2903c46
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ButtomSystem
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -677,7 +841,7 @@ ScriptsOnlyBuild:
     className: SignalReceiver
   - hash:
       serializedVersion: 2
-      Hash: 434e282e8663e9e7a72bee20741a4926
+      Hash: e01fc97f97579c8fdca017a417c4467f
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Car_Script
@@ -713,10 +877,22 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 227bf3b75f9c62e2874b93fe9eaddd49
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: JabaliVista
+  - hash:
+      serializedVersion: 2
       Hash: c1933cc0a2f4ff6eb13333347497beb3
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: TimelineAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 9c3b41af393d4ab0790ba0d7a1636c77
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: "Da\xF1oPrueba"
   - hash:
       serializedVersion: 2
       Hash: 27cec171c359d983bb712b962b19fb0a
@@ -725,10 +901,22 @@ ScriptsOnlyBuild:
     className: AxeScript
   - hash:
       serializedVersion: 2
+      Hash: a98a1f59d1b6da8b89bace3761c68284
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ChangeScene
+  - hash:
+      serializedVersion: 2
       Hash: ee0cef6caaac8ae485bfa82f000f0f7b
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextMeshProUGUI
+  - hash:
+      serializedVersion: 2
+      Hash: 57605b2388aed7e776c7611e09bd2861
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: WinLoseScript
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -815,6 +1003,12 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
+      Hash: 5bf995eb4162d0d16ff75fd620c99d1f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MODELO
+  - hash:
+      serializedVersion: 2
       Hash: 7090bc1e5ccaec2a9d0d1335ed8cee99
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner
@@ -857,28 +1051,16 @@ ScriptsOnlyBuild:
     className: ToggleGroup
   - hash:
       serializedVersion: 2
+      Hash: 33da6fd8424394f49579ce8ddf03b091
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Meta
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: MouseLock
-  - hash:
-      serializedVersion: 2
-      Hash: 39e718c150a3476f8bedf17ec2903c46
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ButtomSystem
-  - hash:
-      serializedVersion: 2
-      Hash: a98a1f59d1b6da8b89bace3761c68284
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeScene
   platform: 19
   scenePathNames:
   - Assets/Scenes/MenuInicio.unity
@@ -887,5 +1069,7 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Tutorial.unity
   - Assets/Scenes/SampleScene.unity
   - Assets/Scenes/MenuCreditos.unity
-  playerPath: C:/Users/Alejandro/Desktop/P-RoRo_Ejecutable v0.4/Prototipo - Proyecto
-    RoRo.exe
+  - Assets/Scenes/Victoria.unity
+  - Assets/Scenes/Derrota.unity
+  playerPath: C:/Users/Alejandro/Desktop/Proyecto RoRo - ejecutable v0.5/Prototipo
+    - Proyecto RoRo.exe

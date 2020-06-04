@@ -12,6 +12,8 @@ public class Car_Script : MonoBehaviour
     public float jumpForce;
     Rigidbody rb;
     float distanceGround = 1;
+
+    public GameObject player;
     
 
     //----------Ruedas---------//
@@ -42,7 +44,13 @@ public class Car_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Movimiento();
+        if (player)
+        {
+            Movimiento();
+        }
+
+        
+        Hability();
     }
 
     void FixedUpdate()
@@ -136,6 +144,14 @@ public class Car_Script : MonoBehaviour
            distanceGround,
            groundLayer
            );
+    }
+
+    void Hability()
+    {
+        if (Input.GetKeyDown(hability))
+        {
+            player.GetComponent<PlayerController>().ActiveHability();
+        }
     }
 
 }

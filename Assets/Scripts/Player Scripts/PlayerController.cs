@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public GameObject car;
+    public GameObject generator;
+
     public float actualLive;
     public float liveModifier;
     public float massModifier;
@@ -12,6 +14,19 @@ public class PlayerController : MonoBehaviour
     public bool habilityCharged;
     public string habilityName;
     public float timer;
+
+    bool lessPlayer = false;
+
+    /*
+    lista de habilidades:
+        -FireBall
+        -Shield
+        -Slash
+        -Axe
+        -Tirachinas
+        -Mazo
+        -Pergamino
+    */
 
 
     // Start is called before the first frame update
@@ -23,6 +38,7 @@ public class PlayerController : MonoBehaviour
         car.GetComponent<Car_Script>().giroForce = (GetComponent<MODELO>().traccion * 5) + 30;
         car.GetComponent<Car_Script>().motorForce = (GetComponent<MODELO>().velocidad * 50000) + 400000;
         habilityCharged = false;
+        
 
     }
 
@@ -38,24 +54,43 @@ public class PlayerController : MonoBehaviour
                 //timer = 0;
             }
         }
+        Die();
         
     }
 
-    void DamageLive(float damage)
+    public void DamageLive(float damage)
     {
         actualLive -= damage;
     }
 
-    void ActiveHability()
+    public void ActiveHability()
     {     //cuando "Carroceria" detecte la tecla de habilidad,llamará esta función
         if (habilityCharged == true)
         {
             timer = 0;
+            habilityCharged = false;
+
+            generator.GetComponent<HabGenerador>().SpeelCast(habilityName, car.transform.rotation);
 
             //llamar funcion generadora de habilidad(script por crear) y indicando el nombre de la habilidad "habilityName"
             Debug.Log("Habilidad lanzada");
+            //car.transform.rotation;
         }
 
+    }
+
+    void Die()
+    {
+        if(actualLive <= 0)
+        {
+            if (lessPlayer == false)
+            {
+                GameObject.Find("SceneChangeManager").GetComponent<WinLoseScript>().playersCounter--;
+                lessPlayer = true;
+            }
+
+            Destroy(gameObject,0.5f);
+        }
     }
 
 }

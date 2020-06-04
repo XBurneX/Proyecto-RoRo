@@ -5,7 +5,7 @@ using UnityEngine;
 public class MODELO : MonoBehaviour {
    
 	public float live;
-	public string name;
+	//public string name;
 	public int peso ;
 	public float velocidad;
 	public int traccion ;
