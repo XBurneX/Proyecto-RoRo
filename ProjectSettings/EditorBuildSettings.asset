@@ -29,4 +29,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Derrota.unity
     guid: 6a49ae942e1961b4a917d2e9342d8392
+  - enabled: 1
+    path: Assets/Scenes/MenuOpciones.unity
+    guid: 605f5b24c5070c34f9d3169601a43b2e
   m_configObjects: {}
