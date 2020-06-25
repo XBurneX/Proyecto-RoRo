@@ -16,11 +16,14 @@ ScriptsOnlyBuild:
     - MazeScript
     - Meta
     - MouseLock
+    - NameSel
     - NameSelect
+    - NextSelect
     - Pause
     - PlayerController
     - PlayerVista
     - Random_Frase
+    - Selector
     - ShieldScript
     - SlashScript
     - TirachinasScript
@@ -41,6 +44,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
+    - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
@@ -83,7 +87,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -130,16 +134,22 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10264}
     - Class: 114
+      Script: {instanceID: 10630}
+    - Class: 114
       Script: {instanceID: 10650}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11104}
+    - Class: 114
+      Script: {instanceID: 11466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
       Script: {instanceID: 0}
     - Class: 157
+      Script: {instanceID: 0}
+    - Class: 213
       Script: {instanceID: 0}
     - Class: 222
       Script: {instanceID: 0}
@@ -207,11 +217,11 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11266}
+      Script: {instanceID: 11268}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -280,13 +290,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11042}
+      Script: {instanceID: 11044}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11136}
+      Script: {instanceID: 11138}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -333,7 +343,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -388,9 +398,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
+    - Class: 114
+      Script: {instanceID: 22114}
+    - Class: 114
+      Script: {instanceID: 30848}
+    - Class: 114
+      Script: {instanceID: 37854}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -479,23 +495,23 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10980}
     - Class: 114
-      Script: {instanceID: 11050}
+      Script: {instanceID: 11052}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11138}
+      Script: {instanceID: 11140}
     - Class: 114
-      Script: {instanceID: 11164}
+      Script: {instanceID: 11166}
     - Class: 114
-      Script: {instanceID: 11262}
+      Script: {instanceID: 11264}
     - Class: 114
-      Script: {instanceID: 11326}
+      Script: {instanceID: 11328}
     - Class: 114
-      Script: {instanceID: 11442}
+      Script: {instanceID: 11444}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 114
-      Script: {instanceID: 11514}
+      Script: {instanceID: 11516}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -556,7 +572,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9882}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -603,9 +619,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10264}
     - Class: 114
-      Script: {instanceID: 11102}
+      Script: {instanceID: 11104}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11466}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1191,6 +1207,24 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 7809566ed0ff844735f10e76d80a81a2
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Selector
+  - hash:
+      serializedVersion: 2
+      Hash: c473bdbd788c113b8bb7bd6322668a6c
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NameSel
+  - hash:
+      serializedVersion: 2
+      Hash: 621d540d1599bd6019b59cdf59aca1c5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: NextSelect
   platform: 19
   scenePathNames:
   - Assets/Scenes/MenuInicio.unity
@@ -1202,5 +1236,5 @@ ScriptsOnlyBuild:
   - Assets/Scenes/Victoria.unity
   - Assets/Scenes/Derrota.unity
   - Assets/Scenes/MenuOpciones.unity
-  playerPath: C:/Users/Alejandro/Desktop/P-RoRo - ejecutable v0.7/Prototipo - Proyecto
+  playerPath: C:/Users/Alejandro/Desktop/P_RoRo - Ejecutable v0.8/Prototipo - Proyecto
     RoRo.exe
