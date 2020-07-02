@@ -56,7 +56,7 @@ public class HabGenerador : MonoBehaviour
         if (habName == "Slash")
         {
             GameObject slh = Instantiate(slash);
-            slh.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 3);
+            slh.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 4);
             slh.transform.rotation = new Quaternion(slh.transform.rotation.x, direction.y, slh.transform.rotation.z, slh.transform.rotation.w);
 
         }
