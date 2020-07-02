@@ -1,5 +1,9 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/Derrota.unity
+=======
+- path: Assets/Scenes/SampleScene.unity
+>>>>>>> c6eaee07e67826fa62905cef65f7ac96e9d54cd2
   isLoaded: 1
   isActive: 1
   isSubScene: 0
