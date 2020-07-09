@@ -15,16 +15,18 @@ public class DBmanager : MonoBehaviour {
     IDbCommand comandosDB;
     IDataReader leerDatos;
 
-    string nombreDB = "UserLogRoRo.sqlite";
+    string nombreDB = "UserLogRoRo.db";
 
     private void Start()
     {
         AbrirDB();
 
+        ComandoSelect("Name_ID", "Names");
 
-
-        ComandoSelect("*", "Names");
-
+        ComandoWHERE("Name", "Names", "Name_ID", "=" , "1");
+        /*ComandoSelect("*", "Names");
+        Debug.Log(NameVerifier("BurneX"));*/
+        //ComandoWHERE("BurneX", "Names", "Name", "=", "Name_ID");
 
         CerrarDB();
     }
@@ -51,6 +53,49 @@ public class DBmanager : MonoBehaviour {
         return true;
     }
 
+    public bool NameVerifier(string User)
+    {
+        comandosDB = conexionDB.CreateCommand(); //ASIGNAR NUEVO COMANDO A LA VARIABLE
+        //string sqlQuery = "select " + "Name" + " from " + "Names" + " WHERE Name = " + User; //ESTRIUCTURA DEL COMANDO SQL
+        string sqlQuery = "SELECT Name FROM " + "Names" + " WHERE name= '" + User + "'";
+        comandosDB.CommandText = sqlQuery; //COMANDO DE SQL
+        leerDatos = comandosDB.ExecuteReader(); //VERIABLE PARA TRABAJO DE LECTURA
+
+        while (leerDatos.Read()) //CONDICION
+        {
+            try
+            {
+                string datos = leerDatos.GetString(1);
+                Debug.Log("(1)Login new user " + User);
+                Debug.Log(datos);
+
+            }
+            catch
+            {
+                Debug.Log(leerDatos);
+                Debug.Log(User + " already exist(1)");
+                return false;
+
+            }
+
+
+        }
+
+        if (leerDatos != null)
+        {
+
+            Debug.Log(leerDatos);
+            Debug.Log("(2)Login new user " + User);
+            return true;
+        }
+        else
+        {
+            Debug.Log(leerDatos);
+            Debug.Log(User + " already exist(2)");
+            return false;
+        }
+    }
+
     void ComandoSelect(string item, string tabla) //COMANDO MAS LAS VARIABLES
     {
         comandosDB = conexionDB.CreateCommand(); //ASIGNAR NUEVO COMANDO A LA VARIABLE
@@ -61,7 +106,7 @@ public class DBmanager : MonoBehaviour {
         {
             try
             {
-                Debug.Log(leerDatos.GetInt32(0) + " - " + leerDatos.GetString(1) + " - " + leerDatos.GetInt32(2));
+                Debug.Log(leerDatos.GetInt32(0) /*+ " - " +/* leerDatos.GetString(1)/* + " - " + leerDatos.GetInt32(2)*/);
             }
             catch (FormatException fe)
             {
@@ -86,7 +131,7 @@ public class DBmanager : MonoBehaviour {
         {
             try
             {
-                Debug.Log(leerDatos.GetInt32(0) + " - " + leerDatos.GetString(1) + " - " + leerDatos.GetInt32(2));
+                Debug.Log(/*leerDatos.GetInt32(0) + " - " + */leerDatos.GetString(1)/* + " - " + leerDatos.GetInt32(2)*/);
             }
             catch (FormatException fe)
             {
@@ -235,7 +280,7 @@ public class DBmanager : MonoBehaviour {
     public void INSERT(string dato)
     {
         comandosDB = conexionDB.CreateCommand();
-        string sqlQuery = String.Format("insert into media_types(Name) values(\"{0}\")", dato);
+        string sqlQuery = String.Format("insert into Names(Name) values(\"{0}\")", dato);
         comandosDB.CommandText = sqlQuery;
         comandosDB.ExecuteScalar();
 
