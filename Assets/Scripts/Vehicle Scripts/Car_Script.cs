@@ -11,8 +11,10 @@ public class Car_Script : MonoBehaviour
     public float frenoForce;
     public float jumpForce;
     Rigidbody rb;
-    float distanceGround = 1;
-
+    public float distanceGround = 1;
+    public float timer;
+    public float mxtimer;
+    public float spd;
     public GameObject player;
     
 
@@ -23,6 +25,8 @@ public class Car_Script : MonoBehaviour
     public WheelCollider rueda_F1;
     public WheelCollider rueda_F2;
     //-------------------------//
+
+    
 
     //-----Escoger Teclas------//
     public KeyCode up;
@@ -44,6 +48,7 @@ public class Car_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if (player)
         {
             Movimiento();
@@ -56,7 +61,10 @@ public class Car_Script : MonoBehaviour
     void FixedUpdate()
     {
         CheckGround();
-        Salto();
+        if (player)
+        {
+            Salto();
+        }
     }   
 
     //#################################################################//
@@ -65,44 +73,89 @@ public class Car_Script : MonoBehaviour
 
     void Movimiento()
     {
+        //////////Movimiento 1(Fuerza secundaria)////////
         float v = 0;
         float h = 0;
         bool breaking = true;
+        float vel = spd * timer;
 
-        //Horizontal//
-        if (Input.GetKey(izq))
+        float rotateValue = 0;
+        if (grounded == true)
         {
-            h = -giroForce;
-        }
-        else if (Input.GetKey(der))
-        {
-            h = giroForce;
-        }
-    
-        //vertical//
-        if (Input.GetKey(up))
-        {
-            //float timer = Time.deltaTime;
-            breaking = false;
-            v = motorForce /** timer*/;
-
-            if (Input.GetKeyUp(up))
+            //Valores//
+            ///////////////////////////////////////////
+            if (Input.GetKey(up) || Input.GetKey(down))
             {
-                breaking = true;
+                timer += Time.deltaTime;
+                if (timer >= mxtimer)
+                {
+                    timer = mxtimer;
+                }
+            }
+            else
+            {
+                timer -= Time.deltaTime;
+                if (timer <= 0)
+                {
+                    timer = 0;
+                }
+            }
+
+            if (Input.GetKey(der) || Input.GetKey(izq))
+            {
+                rotateValue = Time.deltaTime * 50;
+
+            }
+            else
+            {
+                rotateValue -= Time.deltaTime;
+                if (rotateValue <= 0)
+                {
+                    rotateValue = 0;
+                }
+            }
+            //////////////////////////////////////////
+
+            //Horizontal//
+            if (Input.GetKey(izq))
+            {
+
+                h = -giroForce;
+                transform.Rotate(new Vector3(0, -1, 0) * rotateValue, Space.World);
+            }
+            else if (Input.GetKey(der))
+            {
+
+                transform.Rotate(new Vector3(0, 1, 0) * rotateValue, Space.World);
+                h = giroForce;
+            }
+
+            //vertical//
+            if (Input.GetKey(up))
+            {
+                rb.velocity = transform.forward * vel;
+                //float timer = Time.deltaTime;
+                breaking = false;
+                v = motorForce /** timer*/;
+
+                if (Input.GetKeyUp(up))
+                {
+                    breaking = true;
+                }
+            }
+            else if (Input.GetKey(down))
+            {
+                rb.velocity = transform.forward * -vel;
+                breaking = false;
+
+                v = -motorForce;
+
+                if (Input.GetKeyUp(down))
+                {
+                    breaking = true;
+                }
             }
         }
-        else if (Input.GetKey(down))
-        {
-            breaking = false;
-            
-            v = -motorForce;
-
-            if (Input.GetKeyUp(down))
-            {
-                breaking = true;
-            }
-        }
-
         //frenos
         if (breaking == true)
         {
@@ -125,6 +178,8 @@ public class Car_Script : MonoBehaviour
         //Traccion
         rueda_F1.steerAngle = h;
         rueda_F2.steerAngle = h;
+
+      
     }
 
     void Salto()
