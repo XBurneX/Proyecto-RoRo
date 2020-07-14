@@ -21,12 +21,13 @@ public class DBmanager : MonoBehaviour {
     {
         AbrirDB();
 
-        ComandoSelect("Name_ID", "Names");
+        ComandoSelect("Name_ID", "NamesTab");
 
-        ComandoWHERE("Name", "Names", "Name_ID", "=" , "1");
+        //ComandoWHERE("Name", "NamesTab", "Name_ID", "=" , "1");
         /*ComandoSelect("*", "Names");
         Debug.Log(NameVerifier("BurneX"));*/
         //ComandoWHERE("BurneX", "Names", "Name", "=", "Name_ID");
+        ComandoWHERE("Name_ID", "NamesTab", "name", "=", "'BurneX'");
 
         CerrarDB();
     }
@@ -57,7 +58,7 @@ public class DBmanager : MonoBehaviour {
     {
         comandosDB = conexionDB.CreateCommand(); //ASIGNAR NUEVO COMANDO A LA VARIABLE
         //string sqlQuery = "select " + "Name" + " from " + "Names" + " WHERE Name = " + User; //ESTRIUCTURA DEL COMANDO SQL
-        string sqlQuery = "SELECT Name FROM " + "Names" + " WHERE name= '" + User + "'";
+        string sqlQuery = "SELECT Name FROM " + "NamesTab" + " WHERE name= '" + User + "'";
         comandosDB.CommandText = sqlQuery; //COMANDO DE SQL
         leerDatos = comandosDB.ExecuteReader(); //VERIABLE PARA TRABAJO DE LECTURA
 
@@ -96,6 +97,48 @@ public class DBmanager : MonoBehaviour {
         }
     }
 
+    void StarterItemPack(string usrNam)
+    {
+        int usrID = GiveID(usrNam);
+
+
+
+    }
+
+    int GiveID(string usrName)
+    {
+        int ID;
+        comandosDB = conexionDB.CreateCommand();
+        string sqlQuery = "select " + "Name_ID" + " from " + "NamesTab" + " where " + "name" + " " + "=" + " " + usrName;
+        comandosDB.CommandText = sqlQuery;
+        leerDatos = comandosDB.ExecuteReader();
+
+        while (leerDatos.Read())
+        {
+            try
+            {
+                Debug.Log(leerDatos.GetInt32(0) /*+ " - " +/* leerDatos.GetString(1)/* + " - " + leerDatos.GetInt32(2)*/);
+            }
+            catch (FormatException fe)
+            {
+                Debug.Log(fe.Message);
+                continue;
+            }
+            catch (Exception e)
+            {
+                Debug.Log(e.Message);
+                continue;
+            }
+     
+           
+        }
+
+        ID = leerDatos.GetInt32(0);
+        return ID;
+    }
+        
+
+        
     void ComandoSelect(string item, string tabla) //COMANDO MAS LAS VARIABLES
     {
         comandosDB = conexionDB.CreateCommand(); //ASIGNAR NUEVO COMANDO A LA VARIABLE
@@ -131,7 +174,7 @@ public class DBmanager : MonoBehaviour {
         {
             try
             {
-                Debug.Log(/*leerDatos.GetInt32(0) + " - " + */leerDatos.GetString(1)/* + " - " + leerDatos.GetInt32(2)*/);
+                Debug.Log(leerDatos.GetInt32(0)/* + " - " + leerDatos.GetString(1)/* + " - " + leerDatos.GetInt32(2)*/);
             }
             catch (FormatException fe)
             {
@@ -280,7 +323,7 @@ public class DBmanager : MonoBehaviour {
     public void INSERT(string dato)
     {
         comandosDB = conexionDB.CreateCommand();
-        string sqlQuery = String.Format("insert into Names(Name) values(\"{0}\")", dato);
+        string sqlQuery = String.Format("insert into NamesTab(Name) values(\"{0}\")", dato);
         comandosDB.CommandText = sqlQuery;
         comandosDB.ExecuteScalar();
 
