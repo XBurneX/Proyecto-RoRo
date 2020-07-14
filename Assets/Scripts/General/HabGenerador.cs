@@ -50,13 +50,13 @@ public class HabGenerador : MonoBehaviour
         {
             GameObject shld = Instantiate(shield);
             shld.GetComponent<ShieldScript>().protectObject = gameObject;
-            shld.transform.rotation = new Quaternion(shld.transform.rotation.x, direction.y, shld.transform.rotation.z, shld.transform.rotation.w);
+            shld.transform.Rotate(new Vector3(1, 0, 0) * 50, Space.World);
         }
         
         if (habName == "Slash")
         {
             GameObject slh = Instantiate(slash);
-            slh.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 4);
+            slh.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             slh.transform.rotation = new Quaternion(slh.transform.rotation.x, direction.y, slh.transform.rotation.z, slh.transform.rotation.w);
 
         }
@@ -64,21 +64,21 @@ public class HabGenerador : MonoBehaviour
         if (habName == "Axe")
         {
             GameObject ax = Instantiate(axe);
-            ax.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+            ax.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             ax.transform.rotation = new Quaternion(ax.transform.rotation.x, direction.y, ax.transform.rotation.z, ax.transform.rotation.w);
         }
 
         if (habName == "Tirachinas")
         {
             GameObject stn = Instantiate(tirachinas);
-            stn.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 2);
+            stn.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             stn.transform.rotation = new Quaternion(stn.transform.rotation.x, direction.y, stn.transform.rotation.z, stn.transform.rotation.w);
         }
 
         if (habName == "Mazo")
         {
             GameObject maz = Instantiate(mazo);
-            maz.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + 7);
+            maz.transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             maz.transform.rotation = new Quaternion(maz.transform.rotation.x, direction.y, maz.transform.rotation.z, maz.transform.rotation.w);
         }
 

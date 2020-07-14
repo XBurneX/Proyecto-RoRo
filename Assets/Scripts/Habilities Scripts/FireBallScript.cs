@@ -9,7 +9,7 @@ public class FireBallScript : MonoBehaviour
     public GameObject target;
     /*public float angleX;
     public float angleY;*/
-
+    public float daño;
 
     //##################################################################//
 
@@ -54,6 +54,7 @@ public class FireBallScript : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Car_Script>().player.GetComponent<PlayerController>().DamageLive(daño);
             Debug.Log("Se ha dañado al jugador");
             Destroy(gameObject);
         }

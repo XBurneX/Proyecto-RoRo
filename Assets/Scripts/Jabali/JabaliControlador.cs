@@ -6,44 +6,103 @@ using UnityEngine.AI;
 public class JabaliControlador : MonoBehaviour { 
 
 
-    public GameObject Target;
+    public GameObject target;
     public NavMeshAgent agent;
-    public float distance;
-    public float daño;
+    public bool stun;
+    public float timer;
 
-    
+
+
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        stun = true;
+        timer = 0;
+        target = null;
     }
 
     // Update is called once per frame
     void Update()
     {
-        follow();
+        if (stun == true)
+        {
+            Autostun();
+        }
+
+        if (GetComponent<JabaliModelo>().alerta == false)
+        {
+            follow();
+        }
+        else
+        {
+            agent.speed = 0;
+        }
+
+    
     }
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("DamPlayer"))
         {
-            other.gameObject.GetComponent<PlayerController>().DamageLive(daño);
+            
+            target = other.gameObject;
+
+            
+        }
+
+    }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+
+        if (GetComponent<JabaliModelo>().alerta == false)
+        {
+            Debug.Log("tugfa1");
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                
+                stun = true;
+
+                collision.gameObject.GetComponent<Car_Script>().player.GetComponent<PlayerController>().DamageLive(GetComponent<JabaliModelo>().daño);
+
+            }
         }
     }
 
     void follow()
     {
-        if (Vector3.Distance(Target.transform.position, transform.position) < distance)
+        if (target != null)
         {
-            agent.SetDestination(Target.transform.position);
-            agent.speed = 10;
+            if (Vector3.Distance(target.transform.position, transform.position) < GetComponent<JabaliModelo>().distancia)
+            {
+                agent.SetDestination(target.transform.position);
+                agent.speed = GetComponent<JabaliModelo>().velocidad;
+            }
+
+            else
+            {
+                agent.speed = 0;
+
+            }
+        }
+    }
+
+    void Autostun()
+    {
+        GetComponent<JabaliModelo>().alerta = true;
+        timer += Time.deltaTime;
+        
+        if (timer >= GetComponent<JabaliModelo>().timer)
+        {
+            GetComponent<JabaliModelo>().alerta = false;
+            stun = false;
+            timer = 0;
+            
         }
 
-        else
-        {
-            agent.speed = 0;
-
-        }
     }
 }

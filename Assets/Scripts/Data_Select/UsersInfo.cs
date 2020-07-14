@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class UsersInfo : MonoBehaviour
 {
+    public static UsersInfo InfoScript;
 
     //---PLAYER 1 STATS---//
     public string pName1;
@@ -21,6 +22,21 @@ public class UsersInfo : MonoBehaviour
 
 
     //-------------------//
+    
+
+    private void Awake()
+    {
+        if (!InfoScript)
+        {
+            InfoScript = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
 
 
     // Start is called before the first frame update

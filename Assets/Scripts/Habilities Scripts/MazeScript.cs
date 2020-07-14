@@ -8,6 +8,7 @@ public class MazeScript : MonoBehaviour
     //public GameObject target;
     public float timer;
     public float maxTime;
+    public float daño;
 
     //##################################################################//
 
@@ -53,6 +54,7 @@ public class MazeScript : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Car_Script>().player.GetComponent<PlayerController>().DamageLive(daño);
             Debug.Log("Se ha dañado al jugador");
             Destroy(gameObject);
         }

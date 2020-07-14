@@ -81,6 +81,7 @@
     <Compile Include="Assets\Scripts\General\ModularGenerator.cs" />
     <Compile Include="Assets\Scripts\General\MouseLock.cs" />
     <Compile Include="Assets\Scripts\General\Pause.cs" />
+    <Compile Include="Assets\Scripts\General\PlayerGenerator.cs" />
     <Compile Include="Assets\Scripts\General\Random_Frase.cs" />
     <Compile Include="Assets\Scripts\Habilities Scripts\AxeScript.cs" />
     <Compile Include="Assets\Scripts\Habilities Scripts\FireBallScript.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\Scripts\Player Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Player Scripts\PlayerVista.cs" />
     <Compile Include="Assets\Scripts\Vehicle Scripts\Car_Script.cs" />
+    <Compile Include="Assets\Scripts\Vehicle Scripts\Slow_Hazard.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />

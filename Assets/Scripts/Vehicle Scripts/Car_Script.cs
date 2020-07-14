@@ -94,7 +94,7 @@ public class Car_Script : MonoBehaviour
             }
             else
             {
-                timer -= Time.deltaTime;
+                timer -= (Time.deltaTime *6);
                 if (timer <= 0)
                 {
                     timer = 0;
@@ -119,7 +119,7 @@ public class Car_Script : MonoBehaviour
             //Horizontal//
             if (Input.GetKey(izq))
             {
-
+                
                 h = -giroForce;
                 transform.Rotate(new Vector3(0, -1, 0) * rotateValue, Space.World);
             }
@@ -133,10 +133,23 @@ public class Car_Script : MonoBehaviour
             //vertical//
             if (Input.GetKey(up))
             {
-                rb.velocity = transform.forward * vel;
-                //float timer = Time.deltaTime;
-                breaking = false;
-                v = motorForce /** timer*/;
+                if (vel < 0)
+                {
+                   
+                    for (float i = vel; vel >=0; vel+= (Time.deltaTime*7))
+                    {
+                        i = vel;
+                    }
+                }
+                else
+                {
+                    vel = Mathf.Abs(vel);
+                    rb.velocity = transform.forward * vel;
+                    //float timer = Time.deltaTime;
+                    breaking = false;
+                    v = motorForce /** timer*/;
+                }
+                
 
                 if (Input.GetKeyUp(up))
                 {
@@ -145,10 +158,24 @@ public class Car_Script : MonoBehaviour
             }
             else if (Input.GetKey(down))
             {
-                rb.velocity = transform.forward * -vel;
-                breaking = false;
+                if (vel > 2)
+                {
+                    
+                    for (float i = vel; vel <= 0; vel += (Time.deltaTime * 7))
+                    {
+                        i = vel;
+                    }
+                    vel = vel * -1;
+                }
+                else
+                {
+                    vel = vel * -1;
+                    rb.velocity = transform.forward * vel;
+                    breaking = false;
 
-                v = -motorForce;
+                    v = -motorForce;
+                }
+                
 
                 if (Input.GetKeyUp(down))
                 {

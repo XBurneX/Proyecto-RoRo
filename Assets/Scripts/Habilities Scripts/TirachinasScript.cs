@@ -6,6 +6,7 @@ public class TirachinasScript : MonoBehaviour
 {
     public Rigidbody rb;
     public GameObject target;
+    public float daño;
 
     //##################################################################//
 
@@ -46,6 +47,7 @@ public class TirachinasScript : MonoBehaviour
 
         if (other.CompareTag("Player"))
         {
+            other.gameObject.GetComponent<Car_Script>().player.GetComponent<PlayerController>().DamageLive(daño);
             Debug.Log("Se ha dañado al jugador");
             Destroy(gameObject);
         }
