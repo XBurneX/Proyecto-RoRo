@@ -80,6 +80,7 @@
     <Compile Include="Assets\Scripts\General\MetrsModls.cs" />
     <Compile Include="Assets\Scripts\General\ModularGenerator.cs" />
     <Compile Include="Assets\Scripts\General\MouseLock.cs" />
+    <Compile Include="Assets\Scripts\General\MusicBackground.cs" />
     <Compile Include="Assets\Scripts\General\Pause.cs" />
     <Compile Include="Assets\Scripts\General\PlayerGenerator.cs" />
     <Compile Include="Assets\Scripts\General\Random_Frase.cs" />
